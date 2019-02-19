@@ -81,7 +81,7 @@ collections:
         output: true
         permalink: /wiki/:path/
 
-repository: https://github.com/LYSumuze/lysumuze.github.io
+repository: LYSumuze/lysumuze.github.io
 
 # ---------------- #
 #      Comments    #
