@@ -871,18 +871,3 @@ private static class TN extends ITransientNotification.Stub {
 
 ---
 
-最后，照例要安利一下我的微信公众号「闷骚的程序员」，扫码关注，接收 rtfsc-android 的最近更新。
-
-<div align="center"><img width="192px" height="192px" src="https://mazhuang.org/assets/images/qrcode.jpg"/></div>
-
-[1]: https://developer.android.com/reference/android/widget/Toast.html
-[2]: https://developer.android.com/guide/topics/ui/notifiers/toasts.html
-[3]: https://github.com/aosp-mirror/platform_frameworks_base
-[4]: https://github.com/aosp-mirror/platform_frameworks_base/blob/master/core/java/android/widget/Toast.java
-[5]: https://github.com/aosp-mirror/platform_frameworks_base/blob/master/services/core/java/com/android/server/notification/NotificationManagerService.java
-[6]: https://github.com/aosp-mirror/platform_frameworks_base/blob/master/services/core/java/com/android/server/policy/PhoneWindowManager.java
-[7]: https://github.com/aosp-mirror/platform_frameworks_base/blob/master/core/java/android/annotation/IntDef.java
-[8]: https://github.com/aosp-mirror/platform_frameworks_base/blob/master/core/java/android/view/WindowManager.java
-[9]: https://github.com/aosp-mirror/platform_frameworks_base/commit/aa07653d2eea38a7a5bda5944c8a353586916ae9
-[10]: https://github.com/aosp-mirror/platform_frameworks_base/blob/master/core/res/res/layout/transient_notification.xml
-[11]: https://github.com/aosp-mirror/platform_frameworks_base/blob/master/services/core/java/com/android/server/notification/NotificationManagerService.java
