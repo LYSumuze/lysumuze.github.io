@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ site.url }}/assets/vendor/share.js/dist/css/share.min.css">
     <link rel="stylesheet" href="{{ site.url }}/assets/css/globals/responsive.css">
     <link rel="stylesheet" href="{{ site.url }}/assets/css/posts/index.css">
+	<link rel="stylesheet" href="/live2d/css/live2d.css" />
     <!-- Latest compiled and minified CSS -->
     {% for css in page.css %}
     <link rel="stylesheet" href="{{ site.url }}/assets/css/{{css}}">
@@ -85,5 +86,11 @@
                 {% endfor %}
             </nav>
         </div>
+		
+		<div id="landlord">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+    <div class="hide-button">隐藏</div>
+</div>
     </header>
     <!-- / header -->
