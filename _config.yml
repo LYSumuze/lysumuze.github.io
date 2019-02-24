@@ -96,14 +96,14 @@ disqus:
 # https://imsun.net/posts/gitment-introduction/
 gitment:
     owner: LYSumuze
-    repo: https://github.com/LYSumuze/lysumuze.github.io
+    repo: lysumuze.github.io
     oauth:
         client_id: f0cc130e7b4a3fc5503e
         client_secret: bfcfb1f040646b2a8d77c77d05c2e6cbada2abe7
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: LYSumuze
-    repo: https://github.com/LYSumuze/lysumuze.github.io
+    repo: lysumuze.github.io
     clientID: f0cc130e7b4a3fc5503e
     clientSecret: bfcfb1f040646b2a8d77c77d05c2e6cbada2abe7
 # 在使用其它评论组件时可点击显示 Disqus
