@@ -45,5 +45,21 @@ layout: default
     {% include sidebar-post-nav.html %}
   </div>
 </div>
+
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+    owner: 'LYSumuze',
+    repo: 'https://github.com/LYSumuze/lysumuze.github.io',
+    oauth: {
+        client_id: 'bf8765dead4bcd37ce3d',
+        client_secret: 'f97e7b1ca31fc168e84060379e481567ee0c7e9c',
+    },
+});
+gitment.render('gitmentContainer');
+</script>
+
 </section>
 <!-- /section.content -->
