@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ArchLinux安装及配置
-categories: Arch
+categories: Linux
 description: ArchLinux安装及配置
 keywords: Arch, Linux
 ---
