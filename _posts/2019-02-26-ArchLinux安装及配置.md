@@ -7,6 +7,8 @@ keywords: Arch, Linux
 ---
 
 ## <center>ArchLinux安装及配置</center>
+//
+
 ### 【系统安装篇】 
 #### 磁盘空间准备  
 <span style="color:#ff0000;">注意：安装单系统的跳过此步骤(例如：我)</span>   
