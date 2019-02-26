@@ -7,9 +7,9 @@ keywords: Arch, Linux
 ---
 
 ## <center>ArchLinux安装及配置</center>
-//
 
 ### 【系统安装篇】 
+
 #### 磁盘空间准备  
 <span style="color:#ff0000;">注意：安装单系统的跳过此步骤(例如：我)</span>   
 Windows：参考[如何删除磁盘分区](https://jingyan.baidu.com/article/1876c852b7f88f890a13765e.html);空出一块空闲空间即可  
