@@ -1,9 +1,9 @@
 ---
 layout: post
 title: 假期计划
-categories: 计划
-description:假期计划
-keywords: 假期, 计划
+categories: Blog
+description: 假期计划
+keywords: 假期计划
 ---
 
 ## <center>假期计划</center>
