@@ -18,7 +18,7 @@
 
 **[在线预览 &rarr;](https://www.sumuze.cn)**
 
-![screenshot home](https://www.sumuze/assets/images/screenshots/home.png)
+![screenshot home](https://www.sumuze.cn/assets/images/screenshots/home.png)
 
 ## Fork 指南
 
