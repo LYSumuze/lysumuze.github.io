@@ -24,7 +24,7 @@ sudo apt-get install openjfx
 sudo vim /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/accessibility.properties
 ```
 
-![Alt text](https://raw.githubusercontent.com/LYSumuze/lysumuze.github.io/master/images/blog/openjdk1.png)
+![Alt text](https://sbimg.cn/image/openjdk1.pZdHD)
 
 二、HMCL下载
 
@@ -50,15 +50,17 @@ java -jar HMCL-3.2.130.jar  (文件名称可能有所不同，请自行补全)
 
 2.点击游戏列表，选择一个游戏版本安装，太老版本的可能安装失败。我自己安装的是1.7.10
 
-![Alt text](https://raw.githubusercontent.com/LYSumuze/lysumuze.github.io/master/images/blog/%E6%B8%B8%E6%88%8F%E5%88%97%E8%A1%A8.png)
+![Alt text](https://sbimg.cn/image/you-xi-lie-biao.pZcAe)
+
+![Alt text](https://sbimg.cn/image/xuan-ze-you-xi-ban-ben.pZAv6)
 
 3.点击左侧栏旁边的齿轮,选择自动安装 安装Forge
 
-![Alt text](https://raw.githubusercontent.com/LYSumuze/lysumuze.github.io/master/images/blog/%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85.png)
+![Alt text](https://sbimg.cn/image/zi-dong-an-zhuang.pZBfO)
 
 4.在游戏设置里设置好内存和分辨率
 
-![Alt text](https://raw.githubusercontent.com/LYSumuze/lysumuze.github.io/master/images/blog/%E6%B8%B8%E6%88%8F%E7%AE%A1%E7%90%86.png)
+![Alt text](https://sbimg.cn/image/you-xi-guan-li.pZgSN)
 
 5.点击返回,在主页启动游戏即可
 
@@ -80,7 +82,7 @@ https://cloud.189.cn/t/qyQrE3rMVZz2（访问码：ubn7）
 
 下载完成后在模组管理中进行导入
 
-![Alt text](https://raw.githubusercontent.com/LYSumuze/lysumuze.github.io/master/images/blog/%E6%A8%A1%E7%BB%84%E7%AE%A1%E7%90%86.png)
+![Alt text](https://sbimg.cn/image/zi-dong-an-zhuang.pZBfO)
 
 方法二
 
