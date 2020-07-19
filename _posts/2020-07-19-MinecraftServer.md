@@ -64,6 +64,7 @@ Linux安装我的世界可参考 https://www.sumuze.cn/2020/05/23/Minecraft/
 
 ```
 ssh root@IP
+```
 
 2.安装screen 
 
