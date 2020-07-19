@@ -285,7 +285,6 @@ npm install --production  #开始安装
 
 ```
 screen -S name
-
 ```
 
 2.运行启动脚本
@@ -298,7 +297,13 @@ screen -S name
 
 添加op 白名单 权限等命令在此输入即可
 
-Ctrl a+d 返回 关闭终端 完成
+Ctrl a+d 返回 使用screen再新建一个会话，启动frp
+
+```
+sudo screen -S name2
+
+./frpc_linux_amd64
+```
 
 网页管理版：
 
@@ -322,7 +327,7 @@ sudo npm start
 
 保存后启动服务器 完成
 
-
+---
 
 注：如果终端管理版或者网页管理版正常配置后无法启动游戏服务器，可关闭防火墙
 
