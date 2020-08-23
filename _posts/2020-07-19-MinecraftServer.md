@@ -42,7 +42,7 @@ keywords: Linux下搭建我的世界服务器(Forge版)
 
 PS：iOS上有一款很强大的软件叫Remote Desktop Manager 有ssh、VNC、RDP等等功能非常方便 
 
-[Minecraft1.7.10(Forge版网页后台)下载](https://cloud.189.cn/t/n63INjmueIJz)  (访问码：ls46)
+[Minecraft1.7.10(Forge版网页后台)下载](https://cloud.189.cn/t/QBZJBbQrYVjm)  （访问码：dxe1）
 
 这个后台版是我打包好的，已经有一个世界添加了一个城市地图，和一些基本mod。特殊mod添加了一个半条命mod、食品mod、家具mod、载具mod、海洋世界mod等。也可以跟着后面的教程自己配置
 
@@ -50,7 +50,7 @@ PS：iOS上有一款很强大的软件叫Remote Desktop Manager 有ssh、VNC、R
 
 [基本Mods下载](https://cloud.189.cn/t/UZvYr2IjqqI3)（访问码：07su）
 
-[Windows客户端下载](https://cloud.189.cn/t/biEryyY7VVJ3)（访问码：we27）
+[Windows客户端下载](https://cloud.189.cn/t/iIFNNzBvMNvy)（访问码：iy66）
 
 [Linux客户端下载](https://cloud.189.cn/t/eInYfqiaa6Jv)（访问码：phd4） 
 
