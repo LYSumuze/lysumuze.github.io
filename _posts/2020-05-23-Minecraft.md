@@ -13,7 +13,7 @@ keywords: 游戏 我的世界
 1.打开终端 安装OpenJDK8和Openjfx
 
 ```
-sudo apt-get install openjdk8
+sudo apt-get install openjdk-8-jdk
 
 sudo apt-get install openjfx
 ```
