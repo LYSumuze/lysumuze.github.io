@@ -24,7 +24,7 @@ sudo apt-get install openjfx
 sudo vim /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/accessibility.properties
 ```
 
-![Alt text](https://wx1.sbimg.cn/2020/05/23/openjdk1.png)
+![Alt text](https://i.niupic.com/images/2021/02/01/9aNe.png)
 
 二、HMCL下载
 
@@ -50,17 +50,17 @@ java -jar HMCL-3.2.130.jar  (文件名称可能有所不同，请自行补全)
 
 2.点击游戏列表，选择一个游戏版本安装，太老版本的可能安装失败。我自己安装的是1.7.10
 
-![Alt text](https://wx1.sbimg.cn/2020/05/23/b1bcc2c2e165a4c7421c3e65c5169a4b.png)
+![Alt text](https://i.niupic.com/images/2021/02/01/9aNg.png)
 
-![Alt text](https://wx1.sbimg.cn/2020/05/23/d213032c5c0ad788fb0196962c6abd91.png)
+![Alt text](https://i.niupic.com/images/2021/02/01/9aNh.png)
 
 3.点击左侧栏旁边的齿轮,选择自动安装 安装Forge
 
-![Alt text](https://wx1.sbimg.cn/2020/05/23/5c7b593d9f0d44b02f6d8ad8b3421595.png)
+![Alt text](https://i.niupic.com/images/2021/02/01/9aNi.png)
 
 4.在游戏设置里设置好内存和分辨率
 
-![Alt text](https://wx2.sbimg.cn/2020/05/23/47dcc20b6df7608b795a13adb3998de6.png)
+![Alt text](https://i.niupic.com/images/2021/02/01/9aNj.png)
 
 5.点击返回,在主页启动游戏即可
 
@@ -82,7 +82,7 @@ https://cloud.189.cn/t/qyQrE3rMVZz2（访问码：ubn7）
 
 下载完成后在模组管理中进行导入
 
-![Alt text](https://wx1.sbimg.cn/2020/05/23/5c7b593d9f0d44b02f6d8ad8b3421595.png)
+![Alt text](https://i.niupic.com/images/2021/02/01/9aNk.png)
 
 方法二
 
