@@ -10,14 +10,7 @@ keywords: Markdown, VSCode
 
 
 
----
-title: 一份简明的 Markdown 笔记与教程
-date: 2018-09-06
-keywords: Markdown, Markdown笔记
-categories: 经验杂谈
-cover: false
-sticky: false
----
+
 
 为部门内知识分享准备的素材，记录了 Markdown 的优点、应用场景和编辑工具，介绍了标准语法与扩展语法，以及一些应用 Markdown 的奇技淫巧。
 
