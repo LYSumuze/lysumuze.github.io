@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://www.sumuze.cn
+url: https://sumuze.cn
 date_format: "ordinal"
 title: 陆也
 subtitle: "锦瑟无端五十弦，一弦一柱思华年"
@@ -17,7 +17,7 @@ side_bar_repo_limit: 5
 # ---------------- #
 author: Lu Ye
 organization: sumuze.cn
-organization_url: https://www.sumuze.cn
+organization_url: https://sumuze.cn
 github_username: LYSumuze
 location: Changchun, China
 email: 17649851569@163.com
