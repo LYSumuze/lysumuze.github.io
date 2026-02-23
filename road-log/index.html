@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>农村公路养护日志</title>
+    
+    <!-- 👇 关键配置：让手机认为这是一个App -->
+    <meta name="application-name" content="养护日志">
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- iOS全屏运行 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <!-- iOS状态栏透明 -->
+    <meta name="apple-mobile-web-app-title" content="养护日志">
+    <meta name="theme-color" content="#2b7a4b"> <!-- Android地址栏颜色 -->
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- 👇 自动生成图标（免去了您找图标的麻烦） -->
+    <link rel="icon" type="image/png" sizes="196x196" href="data:image/png;base64,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">
+    <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAdhJREFUeJzt3bENgCAUBVGhCqiKHwOf0LZwM4S/dzDUJIUAAAAAyPo1/Pd5AgAAAAD8iCz8HxCz8H9AzML/AzEL/wfELPwfELPwf0BMQv8BMQv/B8Ys/B8Qs/B/QMzC/qS8DAAAAAAAAAAAAAABg5fv7+3/POf/SnP/2+/v7fwMAAAAAAAAAAADwNH+YH/NDAMCU+h8ghgEAAAAAAAAAAIDxPwAAepHhf9D/A0AAAAAAAAAAAADA+L8HAAAAAAAAAAAAAAAAYP3fAAAAAAAAAAAAAAAAML/+BwAAAAAAAAAAAAAAAGD8fwAAAAAAAAAAAAAAADD+z8EAAAAAAAAAAAAAAABj/w4AAAAAAAAAAAAAAABg/J8DAAAAAAAAAAAAAAAAGD8GAAAAAAAAAAAAAAAAYPyZAAAAAAAAAAAAAAAAMH4MAAAAAAAAAAAAAAAAYH8GAAAAAAAAAAAAAAAAYPyJAAAAAAAAAAAAAAAAgDEAAAAAAAAAAAAAAACA8T8DAAAAAAAAAAAAAAAAGH8GAAAAAAAAAAAAAAAAYPxnAAAAAAAAAAAAAAAAAOOpAQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/+AwAAAAAAAAAAAAAAAMD4PwAAAAAAAAAAAAAAABh/BgAAAAAAAAAAAAAAAGD8ZwAAAAAAAAAAAAAAAADjqQEAAAAAAAAAAAAAAAAAY68BAAAAAAAAAAAAAAAAmPEwAAAAAAAAAAAAAAAAgPE0AQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8O/2AQAAAAAAAAAAAAAAAMD4H4Bn/A+gZ+F/gJmF/wNmFv4PmFn4P6Bu4f+AuIX/A+IW/g+YWfg/oG7h/4C4hf8D4hYCAAAAAAAAAAAAAACAv+d/4F/+BwAAAAD8af4P4Bf9DwAAAADAMGoIAAAAAAAAAAAAAAAAYNQ/AAAAAAAAAAAAAAAAwPg/AAAAAAAAAAAAAAAAGH8GAAAAAAAAAAAAAAAAYPxnAAAAAAAAAAAAAAAAAOMpAQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/+AwAAAAAAAAAAAAAAAMD4PwAAAAAAAAAAAAAAABh/BgAAAAAAAAAAAAAAAGD8ZwAAAAAAAAAAAAAAAADjqQEAAAAAAAAAAAAAAAAAY68BAAAAAAAAAAAAAAAAmPEwAAAAAAAAAAAAAAAAgPE0AQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8O/2AQAAAAAAAAAAAAAAAMD4H4Bn/A+gZ+F/gJmF/wNmFv4PmFn4P6Bu4f+AuIX/A+IW/g+YWfg/oG7h/4C4hf8D4hYCAAAAAAAAAAAAAACAv+d/4F/+BwAAAAD8af4P4Bf9DwAAAADAMGoIAAAAAAAAAAAAAAAAYNQ/AAAAAAAAAAAAAAAAwPg/AAAAAAAAAAAAAAAAGH8GAAAAAAAAAAAAAAAAYPxnAAAAAAAAAAAAAAAAAOMpAQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/+AwAAAAAAAAAAAAAAAMD4PwAAAAAAAAAAAAAAABh/BgAAAAAAAAAAAAAAAGD8ZwAAAAAAAAAAAAAAAADjqQEAAAAAAAAAAAAAAAAAY68BAAAAAAAAAAAAAAAAmPEwAAAAAAAAAAAAAAAAgPE0AQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8O/2AQAAAAAAAAAAAAAAAMD4H4Bn/A+gZ+F/gJmF/wNmFv4PmFn4P6Bu4f+AuIX/A+IW/g+YWfg/oG7h/4C4hf8D4hYCAAAAAAAAAAAAAACAv+d/4F/+BwAAAAD8af4P4Bf9DwAAAADAMGoIAAAAAAAAAAAAAAAAYNQ/AAAAAAAAAAAAAAAAwPg/AAAAAAAAAAAAAAAAGH8GAAAAAAAAAAAAAAAAYPxnAAAAAAAAAAAAAAAAAOMpAQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/+AwAAAAAAAAAAAAAAAMD4PwAAAAAAAAAAAAAAABh/BgAAAAAAAAAAAAAAAGD8ZwAAAAAAAAAAAAAAAADjqQEAAAAAAAAAAAAAAAAAY68BAAAAAAAAAAAAAAAAmPEwAAAAAAAAAAAAAAAAgPE0AQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8O/2AQAAAAAAAAAAAAAAAMD4H4Bn/A+gZ+F/gJmF/wNmFv4PmFn4P6Bu4f+AuIX/A+IW/g+YWfg/oG7h/4C4hf8D4hYCAAAAAAAAAAAAAACAv+d/4F/+BwAAAAD8af4P4Bf9DwAAAADAMGoIAAAAAAAAAAAAAAAAYNQ/AAAAAAAAAAAAAAAAwPg/AAAAAAAAAAAAAAAAGH8GAAAAAAAAAAAAAAAAYPxnAAAAAAAAAAAAAAAAAOMpAQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/+AwAAAAAAAAAAAAAAAMD4PwAAAAAAAAAAAAAAABh/BgAAAAAAAAAAAAAAAGD8ZwAAAAAAAAAAAAAAAADjqQEAAAAAAAAAAAAAAAAAY68BAAAAAAAAAAAAAAAAmPEwAAAAAAAAAAAAAAAAgPE0AQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8O/2AQAAAAAAAAAAAAAAAMD4H4Bn/A+gZ+F/gJmF/wNmFv4PmFn4P6Bu4f+AuIX/A+IW/g+YWfg/oG7h/4C4hf8D4hYCAAAAAAAAAAAAAACAv+d/4F/+BwAAAAD8af4P4Bf9DwAAAADAMGoIAAAAAAAAAAAAAAAAYNQ/AAAAAAAAAAAAAAAAwPg/AAAAAAAAAAAAAAAAGH8GAAAAAAAAAAAAAAAAYPxnAAAAAAAAAAAAAAAAAOMpAQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/+AwAAAAAAAAAAAAAAAMD4PwAAAAAAAAAAAAAAABh/BgAAAAAAAAAAAAAAAGD8ZwAAAAAAAAAAAAAAAADjqQEAAAAAAAAAAAAAAAAAY68BAAAAAAAAAAAAAAAAmPEwAAAAAAAAAAAAAAAAgPE0AQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8O/2AQAAAAAAAAAAAAAAAMD4H4Bn/A+gZ+F/gJmF/wNmFv4PmFn4P6Bu4f+AuIX/A+IW/g+YWfg/oG7h/4C4hf8D4hYCAAAAAAAAAAAAAACAv+d/4F/+BwAAAAD8af4P4Bf9DwAAAADAMGoIAAAAAAAAAAAAAAAAYNQ/AAAAAAAAAAAAAAAAwPg/AAAAAAAAAAAAAAAAGH8GAAAAAAAAAAAAAAAAYPxnAAAAAAAAAAAAAAAAAOMpAQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/+AwAAAAAAAAAAAAAAAMD4PwAAAAAAAAAAAAAAABh/BgAAAAAAAAAAAAAAAGD8ZwAAAAAAAAAAAAAAAADjqQEAAAAAAAAAAAAAAAAAY68BAAAAAAAAAAAAAAAAmPEwAAAAAAAAAAAAAAAAgPE0AQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8O/2AQAAAAAAAAAAAAAAAMD4H4Bn/A+gZ+F/gJmF/wNmFv4PmFn4P6Bu4f+AuIX/A+IW/g+YWfg/oG7h/4C4hf8D4hYCAAAAAAAAAAAAAACAv+d/4F/+BwAAAAD8af4P4Bf9DwAAAADAMGoIAAAAAAAAAAAAAAAAYNQ/AAAAAAAAAAAAAAAAwPg/AAAAAAAAAAAAAAAAGH8GAAAAAAAAAAAAAAAAYPxnAAAAAAAAAAAAAAAAAOMpAQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/+AwAAAAAAAAAAAAAAAMD4PwAAAAAAAAAAAAAAABh/BgAAAAAAAAAAAAAAAGD8ZwAAAAAAAAAAAAAAAADjqQEAAAAAAAAAAAAAAAAAY68BAAAAAAAAAAAAAAAAmPEwAAAAAAAAAAAAAAAAgPE0AQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8O/2AQAAAAAAAAAAAAAAAMD4H4Bn/A+gZ+F/gJmF/wNmFv4PmFn4P6Bu4f+AuIX/A+IW/g+YWfg/oG7h/4C4hf8D4hYCAAAAAAAAAAAAAACAv+d/4F/+BwAAAAD8af4P4Bf9DwAAAADAMGoIAAAAAAAAAAAAAAAAYNQ/AAAAAAAAAAAAAAAAwPg/AAAAAAAAAAAAAAAAGH8GAAAAAAAAAAAAAAAAYPxnAAAAAAAAAAAAAAAAAOMpAQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/+AwAAAAAAAAAAAAAAAMD4PwAAAAAAAAAAAAAAABh/BgAAAAAAAAAAAAAAAGD8ZwAAAAAAAAAAAAAAAADjqQEAAAAAAAAAAAAAAAAAY68BAAAAAAAAAAAAAAAAmPEwAAAAAAAAAAAAAAAAgPE0AQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8O/2AQAAAAAAAAAAAAAAAMD4H4Bn/A+gZ+F/gJmF/wNmFv4PmFn4P6Bu4f+AuIX/A+IW/g+YWfg/oG7h/4C4hf8D4hYCAAAAAAAAAAAAAACAv+d/4F/+BwAAAAD8af4P4Bf9DwAAAADAMGoIAAAAAAAAAAAAAAAAYNQ/AAAAAAAAAAAAAAAAwPg/AAAAAAAAAAAAAAAAGH8GAAAAAAAAAAAAAAAAYPxnAAAAAAAAAAAAAAAAAOMpAQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/+AwAAAAAAAAAAAAAAAMD4PwAAAAAAAAAAAAAAABh/BgAAAAAAAAAAAAAAAGD8ZwAAAAAAAAAAAAAAAADjqQEAAAAAAAAAAAAAAAAAY68BAAAAAAAAAAAAAAAAmPEwAAAAAAAAAAAAAAAAgPE0AQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8O/2AQAAAAAAAAAAAAAAAMD4H4Bn/A+gZ+F/gJmF/wNmFv4PmFn4P6Bu4f+AuIX/A+IW/g+YWfg/oG7h/4C4hf8D4hYCAAAAAAAAAAAAAACAv+d/4F/+BwAAAAD8af4P4Bf9DwAAAADAMGoIAAAAAAAAAAAAAAAAYNQ/AAAAAAAAAAAAAAAAwPg/AAAAAAAAAAAAAAAAGH8GAAAAAAAAAAAAAAAAYPxnAAAAAAAAAAAAAAAAAOMpAQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/+AwAAAAAAAAAAAAAAAMD4PwAAAAAAAAAAAAAAABh/BgAAAAAAAAAAAAAAAGD8ZwAAAAAAAAAAAAAAAADjqQEAAAAAAAAAAAAAAAAAY68BAAAAAAAAAAAAAAAAmPEwAAAAAAAAAAAAAAAAgPE0AQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8O/2AQAAAAAAAAAAAAAAAMD4H4Bn/A+gZ+F/gJmF/wNmFv4PmFn4P6Bu4f+AuIX/A+IW/g+YWfg/oG7h/4C4hf8D4hYCAAAAAAAAAAAAAACAv+d/4F/+BwAAAAD8af4P4Bf9DwAAAADAMGoIAAAAAAAAAAAAAAAAYNQ/AAAAAAAAAAAAAAAAwPg/AAAAAAAAAAAAAAAAGH8GAAAAAAAAAAAAAAAAYPxnAAAAAAAAAAAAAAAAAOMpAQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8G/+AwAAAAAAAAAAAAAAAMD4PwAAAAAAAAAAAAAAABh/BgAAAAAAAAAAAAAAAGD8ZwAAAAAAAAAAAAAAAADjqQEAAAAAAAAAAAAAAAAAY68BAAAAAAAAAAAAAAAAmPEwAAAAAAAAAAAAAAAAgPE0AQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8O/2AQAAAAAAAAAAAAAAAMD4H4Bn/A+gZ+F/gJmF/wNmFv4PmFn4P6Bu4f+AuIX/A+IW/g+YWfg/oG7h/4C4hf8D4hYCAAAAAAAAAAAAAACAv+d/4F/+BwAAAAD8af4P4Bf9DwAAAADAMGoIAAAAAAAAAAAAAAAAYNQ/AAAAAAAAAAAAAAAAwPg/AAAAAAAAAAAAAAAAGH8GAAAAAAAAAAAAAAAAYPxnAAAAAAAAAAAAAAAAAOMpAQAAAAAAAAAAAAAAAABjrwEAAAAAAAAAAAAAAACY8TAAAAAAAAAAAAAAAACA8TQBAAAAAAAAAAAAAAAAjKcGAAAAAAAAAAAAAAAAAIadAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOB//AMetFF4XwlX3gAAAABJRU5ErkJggg==">
+
+    <style>
+        /* (原有的CSS样式保持不变，这里省略以节省篇幅，请完整复制之前的CSS代码) */
+        :root { --primary: #2b7a4b; --primary-dark: #1e5f3a; --bg-color: #f3f6f9; --card-bg: #ffffff; --text-main: #1e3c5c; --text-sub: #4a5a6e; --border-color: #e9edf2; --input-bg: #fafbfc; --danger: #b91c1c; --success: #16a34a; }
+       
+        * { box-sizing: border-box; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; -webkit-tap-highlight-color: transparent; }
+        body { background: var(--bg-color); margin: 0; padding: 12px; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); min-height: 100vh; display: flex; flex-direction: column; }
+        .container { max-width: 500px; margin: 0 auto; width: 100%; }
+        h1 { font-size: 1.6rem; color: var(--text-main); margin: 0 0 12px 0; font-weight: 600; border-left: 6px solid var(--primary); padding-left: 12px; }
+        .card { background: var(--card-bg); border-radius: 20px; padding: 18px 16px; margin-bottom: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid var(--border-color); }
+        .section-title { font-weight: 600; font-size: 1.1rem; color: var(--text-main); margin: 16px 0 12px 0; display: flex; align-items: center; gap: 8px; }
+        .section-title::before { content: ''; width: 4px; height: 18px; background: var(--primary); border-radius: 4px; display: inline-block; }
+        .form-row { margin-bottom: 16px; }
+        .form-row label { display: block; font-size: 0.9rem; color: var(--text-sub); margin-bottom: 6px; font-weight: 500; }
+        .form-row input, .form-row select { width: 100%; padding: 14px 16px; font-size: 1rem; border: 1px solid var(--border-color); border-radius: 16px; background: var(--input-bg); transition: 0.2s; -webkit-appearance: none; color: var(--text-main); }
+        .form-row input:focus, .form-row select:focus { border-color: var(--primary); outline: none; background: var(--card-bg); box-shadow: 0 0 0 3px rgba(43,122,75,0.1); }
+        .inline-group { display: flex; gap: 12px; flex-wrap: wrap; }
+        .inline-group .form-row { flex: 1 1 120px; }
+        .vehicle-group { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 8px; }
+        .vehicle-item { background: var(--input-bg); border-radius: 40px; padding: 8px 18px; display: flex; align-items: center; gap: 8px; border: 1px solid var(--border-color); transition: all 0.2s; }
+        .vehicle-item input[type="checkbox"] { width: 22px; height: 22px; accent-color: var(--primary); margin: 0; }
+        .vehicle-item label { font-size: 1rem; font-weight: 500; color: var(--text-main); }
+        .vehicle-item:has(input:checked) { background: #d4edda; border-color: #28a745; box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.25); }
+        .vehicle-item:has(input:checked) label { font-weight: 700; color: #155724; }
+        .block { background: var(--input-bg); border-radius: 16px; padding: 16px; margin-bottom: 20px; border: 1px solid var(--border-color); position: relative; }
+        .block .remove-block { position: absolute; top: 8px; right: 12px; background: none; border: none; font-size: 1.5rem; color: var(--danger); cursor: pointer; padding: 0 8px; opacity: 0.6; }
+        .add-block-btn { background: #eef2f7; border: 1px dashed #94a3b8; border-radius: 40px; padding: 12px 16px; text-align: center; color: var(--text-main); font-weight: 500; margin-top: 8px; cursor: pointer; width: 100%; }
+        .button-bar { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0 16px; }
+        .btn { flex: 1 1 auto; padding: 16px 12px; border: none; border-radius: 40px; font-size: 1.05rem; font-weight: 600; background: white; color: var(--text-main); border: 1px solid var(--border-color); box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: 0.15s; cursor: pointer; text-align: center; }
+        .btn-primary { background: var(--primary); border: 1px solid var(--primary-dark); color: white; box-shadow: 0 4px 8px rgba(43,122,75,0.2); }
+        .btn-secondary:active { background: var(--border-color); }
+        .history-header { display: flex; justify-content: space-between; align-items: center; margin: 20px 0 10px; }
+        .history-title { font-weight: 600; color: var(--text-main); font-size: 1.2rem; }
+        .badge { background: var(--primary); color: white; padding: 4px 12px; border-radius: 40px; font-size: 0.85rem; }
+        .record-item { background: var(--card-bg); border-radius: 24px; padding: 14px 16px; margin-bottom: 10px; border: 1px solid var(--border-color); font-size: 0.95rem; position: relative; cursor: pointer; }
+        .record-header { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 8px; }
+        .record-date { font-weight: 600; color: var(--text-main); background: #eef2f7; padding: 4px 12px; border-radius: 40px; }
+        .record-summary { color: var(--text-sub); display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 0.9rem; }
+        .record-detail { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border-color); display: none; font-size: 0.9rem; }
+        .record-item.expanded .record-detail { display: block; }
+        .section-detail-item { background: var(--input-bg); border-radius: 12px; padding: 10px 12px; margin-bottom: 8px; }
+        .delete-btn { position: absolute; top: 12px; right: 16px; background: none; border: none; font-size: 1.5rem; color: var(--danger); cursor: pointer; padding: 0 8px; line-height: 1; opacity: 0.6; z-index: 2; }
+        .empty-message { text-align: center; color: #94a3b8; padding: 30px 0; font-style: italic; }
+        .footer { color: var(--text-sub); font-size: 0.85rem; text-align: center; margin: 24px 0 10px; }
+        .toast-container { position: fixed; top: 20px; left: 50%; transform: translateX(-50%); z-index: 9999; display: flex; flex-direction: column; gap: 10px; }
+        .toast { padding: 12px 24px; border-radius: 8px; color: white; font-weight: 500; box-shadow: 0 4px 12px rgba(0,0,0,0.15); animation: fadeInDown 0.3s ease-out forwards; }
+        .toast.success { background: var(--success); }
+        .toast.error { background: var(--danger); }
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 1000; display: none; justify-content: center; align-items: center; }
+        .modal-overlay.active { display: flex; }
+        .modal-content { background: var(--card-bg); padding: 24px; border-radius: 20px; width: 90%; max-width: 400px; max-height: 80vh; overflow-y: auto; position: relative; }
+        .modal-title { font-size: 1.2rem; font-weight: 600; margin-bottom: 16px; color: var(--text-main); }
+        .modal-close { position: absolute; top: 12px; right: 16px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-sub); }
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+        .stat-box { background: var(--input-bg); padding: 12px; border-radius: 12px; text-align: center; }
+        .stat-value { font-size: 1.4rem; font-weight: 700; color: var(--primary); }
+        .stat-label { font-size: 0.85rem; color: var(--text-sub); }
+    </style>
+</head>
+<body>
+<!-- (Body内容保持不变，请完整复制之前的Body代码) -->
+<div class="container">
+    <h1 id="pageTitle"></h1>
+    <div class="card">
+        <div class="form-row">
+            <label>日期</label>
+            <input type="date" id="date">
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px;">
+            <div class="route-mgmt-btn" id="routeMgmtBtn">📂 路线库</div>
+            <div class="route-mgmt-btn" id="statsBtn">📊 统计</div>
+        </div>
+        <div class="section-title">👥 施工队出勤</div>
+        <div id="teamsContainer"></div>
+        <div class="add-block-btn" id="addTeamBtn">+ 添加施工队</div>
+        <div class="section-title">🛣️ 施工路段明细</div>
+        <div id="sectionsContainer"></div>
+        <div class="add-block-btn" id="addSectionBtn">+ 添加路段</div>
+    </div>
+    <div class="button-bar">
+        <button class="btn btn-primary" id="saveBtn">💾 保存</button>
+        <button class="btn btn-secondary" id="resetBtn">🔄 清空</button>
+        <button class="btn btn-secondary" id="exportBtn">📤 导出</button>
+    </div>
+    <div class="button-bar" style="margin-top: 0; padding-top: 0;">
+         <button class="btn" style="background: #e0f2fe; color: #0369a1; border-color: #bae6fd;" id="generateReportBtn">📤 生成报告(可发他人)</button>
+    </div>
+    <div class="history-header">
+        <span class="history-title">📋 历史日报</span>
+        <span class="badge" id="recordCount">0</span>
+    </div>
+    <div id="recordList"></div>
+    <div class="footer">数据保存在本机 · 支持离线使用</div>
+</div>
+<div id="toastContainer" class="toast-container"></div>
+<div id="modalOverlay" class="modal-overlay">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <div id="modalBody"></div>
+    </div>
+</div>
+
+<script>
+(function() {
+    // (JS代码保持不变，请完整复制之前的JS代码)
+    const VEHICLES = ['吉A·123', '吉A·456', '吉A·789', '吉A·999', '吉A·000'];
+    const LEADERS = ['张航', '李刚', '王强', '赵岩', '刘伟'];
+    const STORAGE_KEY = 'road_work_logs_v6_optimized';
+    const ROUTE_DICT_KEY = 'route_dictionary_v3';
+    const DRAFT_KEY = 'road_work_draft_v1';
+
+    let ROUTE_DICT = {};
+    let editingIndex = -1;
+
+    const savedDict = localStorage.getItem(ROUTE_DICT_KEY);
+    if (savedDict) { try { ROUTE_DICT = JSON.parse(savedDict); } catch (e) {} }
+
+    function showToast(msg, type = 'info') {
+        const container = document.getElementById('toastContainer');
+        const toast = document.createElement('div');
+        toast.className = `toast ${type}`; toast.innerText = msg;
+        container.appendChild(toast);
+        setTimeout(() => toast.remove(), 3000);
+    }
+    function debounce(func, wait) { let timeout; return function(...args) { clearTimeout(timeout); timeout = setTimeout(() => func.apply(this, args), wait); }; }
+    function openModal(contentHtml) { document.getElementById('modalBody').innerHTML = contentHtml; document.getElementById('modalOverlay').classList.add('active'); }
+    window.closeModal = function() { document.getElementById('modalOverlay').classList.remove('active'); };
+
+    document.getElementById('date').value = new Date().toISOString().slice(0, 10);
+    
+    const teamsContainer = document.getElementById('teamsContainer');
+    function renderVehicleCheckboxes(selectedPlates = []) { return VEHICLES.map(plate => { const checked = selectedPlates.includes(plate) ? 'checked' : ''; return `<div class="vehicle-item"><input type="checkbox" value="${plate}" ${checked}><label>${plate}</label></div>`; }).join(''); }
+    function createTeamBlock(data = {}) {
+        const block = document.createElement('div'); block.className = 'block';
+        const leaderOptions = ['', ...LEADERS].map(name => `<option value="${name}" ${data.leader === name ? 'selected' : ''}>${name || '请选择队长'}</option>`).join('');
+        block.innerHTML = `<button class="remove-block" type="button">✕</button><div class="inline-group"><div class="form-row" style="flex:2;"><label>队长</label><select class="teamLeader">${leaderOptions}</select></div><div class="form-row" style="flex:1;"><label>人数</label><input type="number" class="teamWorkers" min="0" value="${data.workers || 0}"></div></div><div class="form-row"><label>运料车</label><div class="vehicle-group">${renderVehicleCheckboxes(data.vehicles || [])}</div></div><div class="inline-group"><div class="form-row"><label>沥青</label><input type="number" class="teamAsphalt" min="0" step="0.01" value="${data.asphalt || 0}"></div><div class="form-row"><label>石料(m³)</label><input type="number" class="teamStone" min="0" step="0.1" value="${data.stone || 0}"></div></div>`;
+        block.querySelector('.remove-block').onclick = (e) => { e.stopPropagation(); block.remove(); saveDraft(); };
+        block.querySelectorAll('input, select').forEach(el => el.addEventListener('change', saveDraft));
+        return block;
+    }
+    document.getElementById('addTeamBtn').onclick = () => teamsContainer.appendChild(createTeamBlock());
+    function collectTeams() { const teams = []; teamsContainer.querySelectorAll('.block').forEach(b => { const leader = b.querySelector('.teamLeader').value; if (!leader) return; const vehicles = []; b.querySelectorAll('.vehicle-item input:checked').forEach(cb => vehicles.push(cb.value)); teams.push({ leader, workers: parseInt(b.querySelector('.teamWorkers').value, 10) || 0, vehicles, asphalt: parseFloat(b.querySelector('.teamAsphalt').value) || 0, stone: parseFloat(b.querySelector('.teamStone').value) || 0 }); }); return teams; }
+    function setTeams(teams) { teamsContainer.innerHTML = ''; (teams.length ? teams : [{}]).forEach(t => teamsContainer.appendChild(createTeamBlock(t))); }
+
+    const sectionsContainer = document.getElementById('sectionsContainer');
+    function createSectionBlock(data = {}) {
+        const block = document.createElement('div'); block.className = 'block';
+        const routeOptions = Object.keys(ROUTE_DICT).map(code => `<option value="${code}">`).join('');
+        block.innerHTML = `<button class="remove-block" type="button">✕</button><div class="inline-group"><div class="form-row" style="flex:2;"><label>路线编码</label><input type="text" class="routeCode" list="routeList" placeholder="输入或选择" value="${data.routeCode || ''}"><datalist id="routeList">${routeOptions}</datalist></div><div class="form-row" style="flex:3;"><label>路线名称</label><input type="text" class="routeName" placeholder="自动填充" readonly value="${data.routeName || ''}"></div></div><div class="inline-group"><div class="form-row"><label>起点</label><input type="number" class="startPile" step="0.001" placeholder="0.000" value="${data.startPile ?? ''}"></div><div class="form-row"><label>终点</label><input type="number" class="endPile" step="0.001" placeholder="0.000" value="${data.endPile ?? ''}"></div><div class="form-row"><label>里程</label><input type="number" class="length" step="0.01" placeholder="0.5" value="${data.length || ''}"></div></div><div class="inline-group"><div class="form-row"><label>轻缝</label><input type="number" class="light" min="0" step="0.1" value="${data.light || 0}"></div><div class="form-row"><label>中缝</label><input type="number" class="medium" min="0" step="0.1" value="${data.medium || 0}"></div><div class="form-row"><label>重缝</label><input type="number" class="heavy" min="0" step="0.1" value="${data.heavy || 0}"></div><div class="form-row"><label>坑槽(㎡)</label><input type="number" class="pothole" min="0" step="0.1" value="${data.pothole || 0}"></div></div>`;
+        const codeInput = block.querySelector('.routeCode'); const nameInput = block.querySelector('.routeName'); const startInput = block.querySelector('.startPile'); const endInput = block.querySelector('.endPile'); const lengthInput = block.querySelector('.length');
+        codeInput.oninput = () => nameInput.value = ROUTE_DICT[codeInput.value.trim()] || '';
+        const calcLength = debounce(() => { const s = parseFloat(startInput.value), e = parseFloat(endInput.value); if (!isNaN(s) && !isNaN(e)) lengthInput.value = Math.abs(e - s).toFixed(3); }, 300);
+        startInput.addEventListener('input', calcLength); endInput.addEventListener('input', calcLength);
+        block.querySelector('.remove-block').onclick = (e) => { e.stopPropagation(); block.remove(); saveDraft(); };
+        block.querySelectorAll('input').forEach(el => el.addEventListener('change', saveDraft));
+        return block;
+    }
+    document.getElementById('addSectionBtn').onclick = () => sectionsContainer.appendChild(createSectionBlock());
+    function collectSections() { const sections = []; sectionsContainer.querySelectorAll('.block').forEach(b => { const routeCode = b.querySelector('.routeCode').value.trim(); if (!routeCode) return; sections.push({ routeCode, routeName: b.querySelector('.routeName').value.trim(), startPile: parseFloat(b.querySelector('.startPile').value) || 0, endPile: parseFloat(b.querySelector('.endPile').value) || 0, length: parseFloat(b.querySelector('.length').value) || 0, light: parseFloat(b.querySelector('.light').value) || 0, medium: parseFloat(b.querySelector('.medium').value) || 0, heavy: parseFloat(b.querySelector('.heavy').value) || 0, pothole: parseFloat(b.querySelector('.pothole').value) || 0 }); }); return sections; }
+    function setSections(sections) { sectionsContainer.innerHTML = ''; (sections.length ? sections : [{}]).forEach(s => sectionsContainer.appendChild(createSectionBlock(s))); }
+
+    function getFormData() { return { date: document.getElementById('date').value, teams: collectTeams(), sections: collectSections() }; }
+    function setFormData(record) { document.getElementById('date').value = record.date || new Date().toISOString().slice(0,10); setTeams(record.teams || []); setSections(record.sections || []); }
+    function loadRecords() { const data = localStorage.getItem(STORAGE_KEY); return data ? JSON.parse(data) : []; }
+    function saveRecords(records) { localStorage.setItem(STORAGE_KEY, JSON.stringify(records)); renderRecordList(records); updateCount(records.length); }
+    function resetForm() { setTeams([]); setSections([]); editingIndex = -1; document.getElementById('saveBtn').innerText = '💾 保存'; localStorage.removeItem(DRAFT_KEY); }
+
+    function saveDraft() { const data = getFormData(); if (data.teams.length > 0 || data.sections.length > 0 || data.date) { localStorage.setItem(DRAFT_KEY, JSON.stringify(data)); } }
+    function loadDraft() { const draft = localStorage.getItem(DRAFT_KEY); if (draft) { try { const data = JSON.parse(draft); if (confirm("检测到上次未保存的草稿，是否恢复？")) { setFormData(data); showToast("草稿已恢复", "info"); } else { localStorage.removeItem(DRAFT_KEY); } } catch(e) {} } }
+
+    function renderRecordList(records) {
+        const listDiv = document.getElementById('recordList'); if (!records.length) { listDiv.innerHTML = '<div class="empty-message">暂无记录</div>'; return; }
+        const sorted = [...records].sort((a,b) => (a.date < b.date ? 1 : -1)); const fragment = document.createDocumentFragment();
+        sorted.forEach(rec => {
+            const originalIndex = records.findIndex(r => r.date === rec.date && JSON.stringify(r.teams) === JSON.stringify(rec.teams));
+            const item = document.createElement('div'); item.className = 'record-item'; item.dataset.index = originalIndex;
+            const teamsSum = rec.teams.map(t => `${t.leader}(${t.workers}人)`).join(', '); const totalKm = rec.sections.reduce((s, sec) => s + sec.length, 0).toFixed(2);
+            item.innerHTML = `<div class="record-header"><span class="record-date">${rec.date}</span>${teamsSum ? `<span class="record-team">👥 ${teamsSum}</span>` : ''}</div><div class="record-summary"><span>🛣️ ${rec.sections.length}段 / ${totalKm}km</span></div><div class="record-detail">${rec.sections.map(s => `<div class="section-detail-item"><div><strong>${s.routeCode} ${s.routeName}</strong></div><div>${s.startPile} - ${s.endPile} (${s.length}km)</div></div>`).join('')}</div><button class="delete-btn">✕</button>`;
+            item.querySelector('.record-header').onclick = () => item.classList.toggle('expanded');
+            item.querySelector('.delete-btn').onclick = (e) => { e.stopPropagation(); deleteRecord(originalIndex); };
+            item.onclick = (e) => { if(e.target.closest('.delete-btn') || e.target.closest('.record-detail')) return; editRecord(originalIndex); };
+            fragment.appendChild(item);
+        });
+        listDiv.innerHTML = ''; listDiv.appendChild(fragment);
+    }
+    function editRecord(index) { const records = loadRecords(); setFormData(records[index]); editingIndex = index; document.getElementById('saveBtn').innerText = '🔄 更新'; document.querySelector('.card').scrollIntoView({ behavior: 'smooth' }); }
+    function deleteRecord(index) {
+        openModal(`<div class="modal-title">确认删除</div><p style="color: var(--text-sub); margin-bottom: 20px;">确定要删除这条记录吗？</p><div class="button-bar" style="margin:0;"><button class="btn btn-secondary" onclick="closeModal()">取消</button><button class="btn" style="background:#fee2e2; color:#b91c1c;" id="confirmDeleteBtn">删除</button></div>`);
+        document.getElementById('confirmDeleteBtn').onclick = () => { const records = loadRecords(); records.splice(index, 1); saveRecords(records); closeModal(); showToast('已删除', 'info'); if (editingIndex === index) resetForm(); };
+    }
+    function updateCount(count) { document.getElementById('recordCount').innerText = count; }
+
+    document.getElementById('saveBtn').onclick = () => {
+        const formData = getFormData(); if (!formData.teams.length) return showToast('请添加施工队', 'error'); if (!formData.sections.length) return showToast('请填写路段', 'error');
+        let records = loadRecords();
+        if (editingIndex !== -1) { records[editingIndex] = formData; editingIndex = -1; document.getElementById('saveBtn').innerText = '💾 保存'; showToast('已更新', 'success'); }
+        else { records.push(formData); showToast('已保存', 'success'); }
+        saveRecords(records); resetForm();
+    };
+    document.getElementById('resetBtn').onclick = resetForm;
+    document.getElementById('exportBtn').onclick = () => { const records = loadRecords(); if (!records.length) return showToast('无记录', 'error'); const headers = ['日期', '队伍', '编码', '名称', '起点', '终点', '里程', '轻', '中', '重', '坑']; const rows = []; records.forEach(rec => { const tStr = rec.teams.map(t => `${t.leader},${t.workers}`).join('|'); rec.sections.forEach(s => rows.push([rec.date, `"${tStr}"`, s.routeCode, s.routeName, s.startPile, s.endPile, s.length, s.light, s.medium, s.heavy, s.pothole].join(','))); }); const csv = [headers.join(','), ...rows].join('\n'); const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv' }); const link = document.createElement('a'); link.href = URL.createObjectURL(blob); link.download = `日志_${new Date().toISOString().slice(0,10)}.csv`; link.click(); showToast('导出成功', 'success'); };
+    
+    document.getElementById('statsBtn').onclick = () => { const records = loadRecords(); let stats = { days: records.length, asphalt: 0, stone: 0, km: 0 }; records.forEach(r => { r.teams.forEach(t => { stats.asphalt += t.asphalt; stats.stone += t.stone; }); r.sections.forEach(s => { stats.km += s.length; }); }); openModal(`<div class="modal-title">📊 统计</div><div class="stats-grid"><div class="stat-box"><div class="stat-value">${stats.days}</div><div class="stat-label">天数</div></div><div class="stat-box"><div class="stat-value">${stats.km.toFixed(2)}</div><div class="stat-label">总里程</div></div><div class="stat-box"><div class="stat-value">${stats.asphalt.toFixed(1)}</div><div class="stat-label">沥青</div></div><div class="stat-box"><div class="stat-value">${stats.stone.toFixed(1)}</div><div class="stat-label">石料</div></div></div><button class="btn btn-secondary" style="margin-top:20px; width:100%;" onclick="closeModal()">关闭</button>`); };
+
+    document.getElementById('generateReportBtn').onclick = () => {
+        const records = loadRecords(); if (!records.length) return showToast('无记录', 'error');
+        let stats = { days: records.length, asphalt: 0, stone: 0, km: 0 }; records.forEach(r => { r.teams.forEach(t => { stats.asphalt += t.asphalt; stats.stone += t.stone; }); r.sections.forEach(s => { stats.km += s.length; }); });
+        const listHtml = [...records].sort((a,b) => (a.date < b.date ? 1 : -1)).map(rec => { const teamsSum = rec.teams.map(t => `${t.leader}(${t.workers}人)`).join(', '); const totalKm = rec.sections.reduce((s, sec) => s + sec.length, 0).toFixed(2); return `<div class="record-item"><div class="record-header"><span class="record-date">${rec.date}</span><span class="record-team">👥 ${teamsSum}</span></div><div class="record-summary"><span>🛣️ ${rec.sections.length}段 / ${totalKm}km</span></div><div class="record-detail" style="display:block;">${rec.sections.map(s => `<div class="section-detail-item"><div><strong>${s.routeCode} ${s.routeName}</strong></div><div>${s.startPile} - ${s.endPile}</div></div>`).join('')}</div></div>`; }).join('');
+        const reportHtml = `<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>统计报告</title><style>body{font-family:sans-serif; background:#f3f6f9; padding:20px;} .container{max-width:600px; margin:0 auto;} h1{font-size:1.5rem; color:#1e3c5c; border-left:5px solid #2b7a4b; padding-left:10px;} .stats-grid{display:grid; grid-template-columns:1fr 1fr; gap:15px; margin-bottom:20px;} .stat-box{background:white; padding:20px; border-radius:16px; text-align:center;} .stat-val{font-size:1.8rem; font-weight:bold; color:#2b7a4b;} .stat-label{font-size:0.9rem; color:#666;} .record-item{background:white; border-radius:12px; padding:15px; margin-bottom:10px;} .record-header{display:flex; justify-content:space-between; font-weight:bold;} .record-detail{font-size:0.9rem; color:#444; margin-top:5px;}</style></head><body><div class="container"><h1>📊 养护统计报告</h1><div class="stats-grid"><div class="stat-box"><div class="stat-val">${stats.days}</div><div class="stat-label">施工天数</div></div><div class="stat-box"><div class="stat-val">${stats.km.toFixed(2)}</div><div class="stat-label">总里程</div></div><div class="stat-box"><div class="stat-val">${stats.asphalt.toFixed(1)}</div><div class="stat-label">沥青总耗</div></div><div class="stat-box"><div class="stat-val">${stats.stone.toFixed(1)}</div><div class="stat-label">石料总耗(m³)</div></div></div>${listHtml}</div></body></html>`;
+        const blob = new Blob([reportHtml], { type: 'text/html' }); const link = document.createElement('a'); link.href = URL.createObjectURL(blob); link.download = `养护报告_${new Date().toISOString().slice(0,10)}.html`; link.click(); showToast('报告已生成', 'success');
+    };
+
+    document.getElementById('routeMgmtBtn').onclick = () => {
+        const listHtml = Object.entries(ROUTE_DICT).map(([code, name]) => `<div style="display:flex; justify-content:space-between; padding:8px; border-bottom:1px solid #eee;"><span>${code} - ${name}</span><button onclick="removeRoute('${code}')" style="color:red; border:none; background:none;">✕</button></div>`).join('') || '<div style="text-align:center; padding:20px; color:#999;">暂无路线</div>';
+        openModal(`<div class="modal-title">📂 路线库管理</div><div style="max-height: 200px; overflow-y: auto; margin-bottom: 16px; border: 1px solid #eee; border-radius: 8px;">${listHtml}</div><div style="display:flex; gap:8px; margin-bottom:12px;"><input type="text" id="newCode" placeholder="编码" style="flex:1; padding:8px; border-radius:8px; border:1px solid #eee;"><input type="text" id="newName" placeholder="名称" style="flex:2; padding:8px; border-radius:8px; border:1px solid #eee;"></div><div class="button-bar" style="margin:0;"><button class="btn btn-primary" onclick="addRoute()">添加</button><button class="btn btn-secondary" onclick="document.getElementById('fileImport').click()">导入CSV</button></div><input type="file" id="fileImport" accept=".csv" style="display:none">`);
+        document.getElementById('fileImport').onchange = (e) => { const file = e.target.files[0]; if(!file) return; const reader = new FileReader(); reader.onload = (ev) => { const lines = ev.target.result.split('\n'); let count = 0; lines.forEach(line => { const parts = line.split(','); if(parts.length >= 2) { const c = parts[0].trim(), n = parts[1].trim(); if(c) { ROUTE_DICT[c] = n; count++; } } }); localStorage.setItem(ROUTE_DICT_KEY, JSON.stringify(ROUTE_DICT)); showToast(`导入 ${count} 条`, 'success'); document.getElementById('routeMgmtBtn').click(); }; reader.readAsText(file); };
+    };
+    window.removeRoute = (code) => { delete ROUTE_DICT[code]; localStorage.setItem(ROUTE_DICT_KEY, JSON.stringify(ROUTE_DICT)); showToast('已删除', 'info'); document.getElementById('routeMgmtBtn').click(); };
+    window.addRoute = () => { const code = document.getElementById('newCode').value.trim(); const name = document.getElementById('newName').value.trim(); if(!code || !name) return showToast('请填写完整', 'error'); ROUTE_DICT[code] = name; localStorage.setItem(ROUTE_DICT_KEY, JSON.stringify(ROUTE_DICT)); showToast('添加成功', 'success'); document.getElementById('routeMgmtBtn').click(); };
+
+    const initialRecords = loadRecords();
+    renderRecordList(initialRecords);
+    updateCount(initialRecords.length);
+    document.getElementById('pageTitle').innerText = `🛣️ ${new Date().getFullYear()}年农村公路养护日志`;
+    setTeams([]);
+    setSections([]);
+    loadDraft();
+})();
+</script>
+</body>
+</html>
