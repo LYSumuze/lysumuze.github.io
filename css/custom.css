@@ -1,0 +1,30 @@
+/* 自定义 CSS - 解决 Live2D 遮挡右侧工具栏问题 */
+/* 彻底解决点击穿透问题 */
+#live2d-container,
+.live2d-widget,
+.oml2d-stage,
+.oml2d-root {
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+/* 恢复 live2d 内部的交互 */
+#live2d-container * {
+  pointer-events: none !important;
+}
+/* 右侧工具栏确保可点击 */
+#rightside {
+  z-index: 10000 !important;
+  pointer-events: auto !important;
+}
+#rightside > * {
+  pointer-events: auto !important;
+}
+/* 给右侧按钮更高的层级 */
+#rightside-config,
+#go-up,
+#darkmode,
+#hide-aside-btn {
+  pointer-events: auto !important;
+  z-index: 10001 !important;
+  position: relative;
+}
