@@ -146,8 +146,8 @@
     const VEHICLES_STORAGE_KEY = 'road_vehicles_v1';
     const LEADERS_STORAGE_KEY = 'road_leaders_v1';
     // 初始化：从本地存储读取，无则用默认值
-    let VEHICLES = JSON.parse(localStorage.getItem(VEHICLES_STORAGE_KEY)) || ['吉A·7E50Y', '吉A·30SJ0', '吉A·T2X00', '吉J·8L623'];
-    let LEADERS = JSON.parse(localStorage.getItem(LEADERS_STORAGE_KEY)) || ['张航', '乔大伟', '郝军', '陶歌'];
+    let VEHICLES = JSON.parse(localStorage.getItem(VEHICLES_STORAGE_KEY)) || [];
+    let LEADERS = JSON.parse(localStorage.getItem(LEADERS_STORAGE_KEY)) || [];
 
     // 保存车辆列表到本地存储
     function saveVehicles() {
