@@ -232,10 +232,10 @@
     // === 车牌 & 队长 localStorage 管理 ===
     const VEHICLE_LIST_KEY = 'vehicle_list_v1';
     const LEADER_LIST_KEY  = 'leader_list_v1';
-    const DEFAULTS_VEHICLES = ['吉A·123', '吉A·456', '吉A·789', '吉A·999', '吉A·000'];
-    const DEFAULTS_LEADERS  = ['张航', '李刚', '王强', '赵岩', '刘伟'];
+    const DEFAULTS_VEHICLES = [];
+    const DEFAULTS_LEADERS  = [];
 
-    // 首次初始化标记
+    // 首次初始化标记（仅在 localStorage 为空时写入空数组，不覆盖用户已有数据）
     function _initOnce(key, defaults) {
         if (localStorage.getItem(key) === null) {
             localStorage.setItem(key, JSON.stringify(defaults));
@@ -423,7 +423,37 @@
         openModal(buildSettingsModalContent());
     }
 
-    // 刷新车辆管理列表（原地更新）
+    // ——————————————————————————————
+    // 增删改后同步到页面上的施工队区块
+    // ——————————————————————————————
+    function syncTeamBlocks() {
+        // 1. 同步运料车复选框
+        const allVehicles = getVehicles();
+        document.querySelectorAll('#teamsContainer .block').forEach(block => {
+            const currentChecked = Array.from(block.querySelectorAll('.vehicle-item input:checked')).map(cb => cb.value);
+            const group = block.querySelector('.vehicle-group');
+            if (!group) return;
+            group.innerHTML = allVehicles.map(plate => {
+                const checked = currentChecked.includes(plate) ? 'checked' : '';
+                return `<div class="vehicle-item"><input type="checkbox" value="${escAttr(plate)}" ${checked}><label>${escHtml(plate)}</label></div>`;
+            }).join('');
+        });
+
+        // 2. 同步队长下拉选项
+        const allLeaders = getLeaders();
+        document.querySelectorAll('#teamsContainer .block').forEach(block => {
+            const sel = block.querySelector('.teamLeader');
+            if (!sel) return;
+            const currentVal = sel.value;
+            sel.innerHTML = ['', ...allLeaders].map(name =>
+                `<option value="${escAttr(name)}" ${currentVal === name ? 'selected' : ''}>${name || '请选择队长'}</option>`
+            ).join('');
+        });
+    }
+
+    // ——————————————————————————————
+    // 刷新设置弹窗内的管理列表（原地更新，不关弹窗）
+    // ——————————————————————————————
     function refreshVehicleList() {
         const vehicles = getVehicles();
         const container = document.getElementById('settingsVehicleList');
@@ -438,7 +468,6 @@
             : '<div class="settings-empty">暂无车牌</div>';
     }
 
-    // 刷新队长管理列表
     function refreshLeaderList() {
         const leaders = getLeaders();
         const container = document.getElementById('settingsLeaderList');
@@ -464,6 +493,7 @@
         saveVehicles(arr);
         input.value = '';
         refreshVehicleList();
+        syncTeamBlocks();
         showToast('车牌已添加', 'success');
     };
 
@@ -471,6 +501,7 @@
         const arr = getVehicles().filter(v => v !== oldVal);
         saveVehicles(arr);
         refreshVehicleList();
+        syncTeamBlocks();
         showToast('车牌已删除', 'info');
     };
 
@@ -482,11 +513,11 @@
         const arr = getVehicles();
         const idx = arr.indexOf(oldVal);
         if (idx === -1) return;
-        // 检查重名（排除自己）
         if (trimmed !== oldVal && arr.includes(trimmed)) return showToast('车牌已存在', 'error');
         arr[idx] = trimmed;
         saveVehicles(arr);
         refreshVehicleList();
+        syncTeamBlocks();
         showToast('车牌已修改', 'success');
     };
 
@@ -501,6 +532,7 @@
         saveLeaders(arr);
         input.value = '';
         refreshLeaderList();
+        syncTeamBlocks();
         showToast('队长已添加', 'success');
     };
 
@@ -508,6 +540,7 @@
         const arr = getLeaders().filter(l => l !== oldVal);
         saveLeaders(arr);
         refreshLeaderList();
+        syncTeamBlocks();
         showToast('队长已删除', 'info');
     };
 
@@ -523,6 +556,7 @@
         arr[idx] = trimmed;
         saveLeaders(arr);
         refreshLeaderList();
+        syncTeamBlocks();
         showToast('队长已修改', 'success');
     };
 
